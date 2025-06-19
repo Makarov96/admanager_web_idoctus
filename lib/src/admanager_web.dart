@@ -1,10 +1,15 @@
 import "package:universal_html/html.dart";
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 /// Simple plugin to display ads from AdManager in Flutter Web
 ///
 /// This plugin will use the GPT.js library from Google to display ads
 /// using one Custom Function JS that will be injected in the DOM
 class AdManagerWeb {
+  static void registerWith(Registrar? registrar) {
+    // No se necesita hacer nada especial aquí
+    // La funcionalidad se inicializa con init()
+  }
   static void init() {
     document.head?.append(document.createDocumentFragment()
       ..append(ScriptElement()
